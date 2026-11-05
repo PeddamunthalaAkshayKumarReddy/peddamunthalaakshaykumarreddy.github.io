@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>P M Akshay Kumar Reddy | Data Analyst Portfolio</title>
+<meta property="og:title" content="P M Akshay Kumar Reddy | Data Analyst Portfolio">
+<meta property="og:description" content="Manufacturing and healthcare analytics case studies built with Excel, MySQL, Power BI and Tableau.">
+<meta property="og:image" content="mfg-tab-executive.webp">
+<style>html{color-scheme:light dark}body{margin:0}</style>
+<meta name="description" content="Data analyst portfolio of P M Akshay Kumar Reddy: two capstone case studies in manufacturing and healthcare analytics built with Excel, MySQL, Power BI and Tableau.">
+<link rel="icon" href="akshay-avatar.webp" type="image/webp">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
+<style>
+/* Layout: an analyst's case file. Left-aligned column (max 1180px); hero pairs the pitch with a
+   cross-tool reconciliation check; each case study = meta strip, dashboard viewer, method + findings, checks log. */
+:root {
+  --paper: #F3F6F5;
+  --surface: #FFFFFF;
+  --sunken: #E7EDEB;
+  --ink: #10201D;
+  --ink-2: #455854;
+  --ink-3: #66776F;
+  --rule: #D2DCD9;
+  --forest: #0B5A47;
+  --forest-soft: #DCECE5;
+  --cyan: #0A6A7D;
+  --cyan-soft: #DBEEF2;
+  --ok: #1B7742;
+  --flag: #9C4D17;
+  --stage: #E1E8E5;
+  --band: #10201D;
+  --band-ink: #F3F6F5;
+  --band-line: rgba(243, 246, 245, .3);
+  --shadow: 0 1px 2px rgba(16, 32, 29, .06), 0 8px 24px rgba(16, 32, 29, .06);
+
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --step--1: .8125rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.625rem;
+  --step-3: clamp(1.9rem, 1.4rem + 2vw, 2.6rem);
+  --step-4: clamp(2.5rem, 1.6rem + 3.8vw, 4.4rem);
+
+  --wrap: 1180px;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0A141B;
+    --surface: #0F1C26;
+    --sunken: #0C1820;
+    --ink: #E3EBED;
+    --ink-2: #A5B5BA;
+    --ink-3: #82959B;
+    --rule: #1F3240;
+    --forest: #5DC3A0;
+    --forest-soft: #12302A;
+    --cyan: #4BC7DF;
+    --cyan-soft: #0F2D38;
+    --ok: #5CC985;
+    --flag: #E89B5D;
+    --stage: #071017;
+    --band: #0E2A24;
+    --band-ink: #E3EBED;
+    --band-line: rgba(227, 235, 237, .28);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0A141B;
+  --surface: #0F1C26;
+  --sunken: #0C1820;
+  --ink: #E3EBED;
+  --ink-2: #A5B5BA;
+  --ink-3: #82959B;
+  --rule: #1F3240;
+  --forest: #5DC3A0;
+  --forest-soft: #12302A;
+  --cyan: #4BC7DF;
+  --cyan-soft: #0F2D38;
+  --ok: #5CC985;
+  --flag: #E89B5D;
+  --stage: #071017;
+  --band: #0E2A24;
+  --band-ink: #E3EBED;
+  --band-line: rgba(227, 235, 237, .28);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--paper);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, h4 { font-family: var(--f-display); line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+p { margin: 0; }
+.wrap {
+  max-width: calc(var(--wrap) + 2 * 32px);
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) {
+  .wrap {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+.label {
+  font-family: var(--f-mono);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- top bar ---------- */
+.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
+.brand-name { font-family: var(--f-display); font-weight: 650; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav { display: flex; gap: 4px; }
+.nav a {
+  font-family: var(--f-mono); font-size: .78rem; letter-spacing: .04em; text-decoration: none;
+  color: var(--ink-2); padding: 8px 10px; border-radius: 6px;
+}
+.nav a:hover { color: var(--ink); background: var(--sunken); }
+@media (max-width: 640px) {
+  .brand-name { display: none; }
+  .nav a { padding: 8px 7px; font-size: .74rem; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(40px, 6vw, 72px); border-bottom: 1px solid var(--rule); }
+.hero .wrap { display: grid; gap: clamp(32px, 5vw, 64px); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 980px) { .hero .wrap { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+.hero-copy { display: grid; gap: 22px; min-width: 0; }
+.hero h1 { font-size: var(--step-4); font-stretch: 118%; font-weight: 800; letter-spacing: -.025em; line-height: 1.02; }
+.hero h1 .pm { display: block; font-size: .42em; font-stretch: 125%; font-weight: 600; letter-spacing: .02em; color: var(--ink-3); margin-bottom: .35em; }
+.lede { font-size: var(--step-1); line-height: 1.5; color: var(--ink-2); max-width: 36ch; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 0; margin: 0; list-style: none; }
+.facts li { font-family: var(--f-mono); font-size: .8rem; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+.facts li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--forest); flex: none; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.btn {
+  font-family: var(--f-display); font-weight: 650; font-size: .95rem; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px;
+  border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.btn:hover { border-color: var(--ink-3); }
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--ink) 86%, var(--forest)); }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+/* reconciliation ledger */
+.ledger {
+  margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden; min-width: 0;
+}
+.ledger-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; padding: 16px 18px 12px; border-bottom: 1px solid var(--rule); }
+.ledger-head h2 { font-size: 1.05rem; font-stretch: 105%; font-weight: 700; }
+.ledger-scroll { overflow-x: auto; }
+.ledger table { width: 100%; border-collapse: collapse; font-family: var(--f-mono); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.ledger th, .ledger td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+.ledger thead th { font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; background: var(--sunken); }
+.ledger td:first-child { font-family: var(--f-body); font-size: .9rem; white-space: normal; min-width: 7.5rem; }
+.ledger td.v { text-align: right; color: var(--ink); font-weight: 500; }
+.ledger th.c, .ledger td.c { text-align: center; width: 1%; }
+.ledger thead th.v { text-align: right; }
+.tick { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); }
+.tick svg { width: 12px; height: 12px; }
+.ledger tbody tr:last-child td { border-bottom: 0; }
+@media (max-width: 520px) {
+  .ledger th, .ledger td { padding: 9px 6px; }
+  .ledger th:first-child, .ledger td:first-child { padding-left: 12px; }
+  .ledger th.c { white-space: normal; font-size: .62rem; line-height: 1.25; }
+  .ledger td:first-child { min-width: 0; font-size: .85rem; }
+  .ledger td.v { font-size: .76rem; }
+}
+.ledger-foot { padding: 12px 18px 16px; font-size: .88rem; color: var(--ink-2); border-top: 1px solid var(--rule); background: var(--sunken); }
+.ledger-foot b { font-family: var(--f-mono); font-weight: 600; color: var(--ok); font-size: .82rem; }
+
+/* ---------- sections ---------- */
+.section { padding-block: clamp(56px, 8vw, 104px); }
+.section + .section { border-top: 1px solid var(--rule); }
+.section-head { display: grid; gap: 12px; margin-bottom: clamp(28px, 4vw, 44px); max-width: 62ch; }
+.section-head h2 { font-size: var(--step-3); font-stretch: 112%; font-weight: 800; }
+.section-head p { color: var(--ink-2); }
+
+.index { list-style: none; margin: 0 0 clamp(40px, 6vw, 72px); padding: 0; border-top: 1px solid var(--rule); }
+.index a {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px 24px; padding: 18px 4px;
+  border-bottom: 1px solid var(--rule); text-decoration: none; align-items: baseline;
+}
+@media (min-width: 760px) { .index a { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; } }
+.index a:hover .idx-title { color: var(--case); }
+.idx-title { font-family: var(--f-display); font-stretch: 108%; font-weight: 700; font-size: var(--step-1); }
+.idx-meta { font-family: var(--f-mono); font-size: .8rem; color: var(--ink-2); }
+.idx-go { font-family: var(--f-mono); font-size: .8rem; color: var(--case); }
+
+/* ---------- case study ---------- */
+.case-mfg { --case: var(--forest); --case-soft: var(--forest-soft); }
+.case-hc { --case: var(--cyan); --case-soft: var(--cyan-soft); }
+.case { display: grid; gap: clamp(28px, 4vw, 44px); }
+.case + .case { margin-top: clamp(72px, 10vw, 128px); padding-top: clamp(56px, 8vw, 96px); border-top: 1px solid var(--rule); }
+.case-head { display: grid; gap: 16px; }
+.kicker { display: inline-flex; align-items: center; gap: 10px; }
+.kicker .swatch { width: 22px; height: 6px; border-radius: 3px; background: var(--case); }
+.case-head h3 { font-size: var(--step-3); font-stretch: 110%; font-weight: 800; max-width: 24ch; }
+.case-head h3 span { display: block; color: var(--case); font-size: .58em; font-stretch: 100%; font-weight: 650; letter-spacing: 0; margin-top: .45em; }
+.case-summary { max-width: 66ch; color: var(--ink-2); font-size: var(--step-1); line-height: 1.55; }
+
+.meta { display: grid; grid-template-columns: minmax(0, 1fr); margin: 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+@media (min-width: 640px) { .meta { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .meta { grid-template-columns: 1fr 1.5fr 1.3fr 1fr; } }
+.meta > div { padding: 16px 18px; border-bottom: 1px solid var(--rule); display: grid; gap: 6px; align-content: start; min-width: 0; }
+@media (min-width: 640px) { .meta > div { border-right: 1px solid var(--rule); } }
+@media (min-width: 1040px) { .meta > div { border-bottom: 0; } .meta > div:last-child { border-right: 0; } }
+.meta dt { margin: 0; }
+.meta dd { margin: 0; font-size: .95rem; line-height: 1.5; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: var(--f-mono); font-size: .74rem; padding: 3px 8px; border-radius: 5px; background: var(--case-soft); color: var(--ink); border: 1px solid color-mix(in srgb, var(--case) 25%, transparent); }
+
+/* gallery */
+.gallery { display: grid; gap: 14px; min-width: 0; }
+.g-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.g-tab {
+  font-family: var(--f-mono); font-size: .8rem; padding: 9px 14px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--rule); background: var(--surface); color: var(--ink-2); min-height: 40px;
+}
+.g-tab[aria-selected="true"] { background: var(--case); color: var(--paper); border-color: var(--case); }
+.g-panel { display: grid; gap: 12px; min-width: 0; }
+.stage { margin: 0; display: grid; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.stage-frame { position: relative; background: var(--stage); aspect-ratio: var(--ratio, 16 / 9); max-width: 100%; }
+.stage-link { display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.stage-link img { width: 100%; height: 100%; object-fit: contain; }
+.stage-nav {
+  position: absolute; top: 50%; translate: 0 -50%; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--rule); background: color-mix(in srgb, var(--surface) 92%, transparent); color: var(--ink);
+  display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow);
+}
+.stage-nav svg { width: 18px; height: 18px; }
+.stage-nav.prev { left: 10px; }
+.stage-nav.next { right: 10px; }
+.stage figcaption { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 14px; padding: 14px 18px; border-top: 1px solid var(--rule); align-items: baseline; }
+.g-count { font-family: var(--f-mono); font-size: .78rem; color: var(--case); grid-row: span 2; font-variant-numeric: tabular-nums; }
+.g-title { font-family: var(--f-display); font-weight: 700; font-size: 1.02rem; }
+.g-desc { font-size: .95rem; color: var(--ink-2); grid-column: 2; }
+.g-hint { font-family: var(--f-mono); font-size: .72rem; color: var(--ink-3); }
+.thumbs { list-style: none; margin: 0; padding: 2px 2px 8px; display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x proximity; }
+.thumb {
+  display: grid; gap: 6px; width: 150px; padding: 0; border: 0; background: none; cursor: pointer; text-align: left;
+  color: var(--ink-2); scroll-snap-align: start; flex: none;
+}
+.thumb img { width: 150px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; border-radius: 6px; border: 1px solid var(--rule); background: var(--stage); }
+.thumb span { font-family: var(--f-mono); font-size: .7rem; line-height: 1.35; }
+.thumb[aria-current="true"] img { outline: 2px solid var(--case); outline-offset: 2px; }
+.thumb[aria-current="true"] span { color: var(--ink); font-weight: 600; }
+.thumb:hover img { border-color: var(--ink-3); }
+
+/* method + findings */
+.case-body { display: grid; gap: clamp(32px, 5vw, 56px); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1000px) { .case-body { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); } }
+.block-title { font-size: var(--step-1); font-stretch: 108%; font-weight: 750; margin-bottom: 18px; display: flex; align-items: baseline; gap: 12px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 0; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 2px 12px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.steps li:last-child { border-bottom: 1px solid var(--rule); }
+.steps li::before {
+  content: counter(step, decimal-leading-zero); font-family: var(--f-mono); font-size: .78rem; color: var(--case);
+  grid-row: span 2; padding-top: 2px;
+}
+.steps b { font-family: var(--f-display); font-weight: 700; font-size: 1rem; }
+.steps p { font-size: .95rem; color: var(--ink-2); line-height: 1.55; }
+.steps .who { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; padding: 1px 6px; border-radius: 4px; margin-left: 6px; vertical-align: 2px; background: var(--sunken); color: var(--ink-2); white-space: nowrap; }
+.steps .who.me { background: var(--case-soft); color: var(--ink); }
+
+.findings { display: grid; gap: 0; }
+.finding { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px 24px; padding: 20px 0; border-top: 1px solid var(--rule); }
+.finding:last-child { border-bottom: 1px solid var(--rule); }
+@media (min-width: 620px) { .finding { grid-template-columns: 9.5rem minmax(0, 1fr); } }
+.fig { display: grid; gap: 4px; align-content: start; }
+.fig-n { font-family: var(--f-display); font-stretch: 112%; font-weight: 800; font-size: 2rem; line-height: 1; color: var(--case); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.fig-l { font-family: var(--f-mono); font-size: .72rem; color: var(--ink-3); line-height: 1.4; }
+.finding-text { display: grid; gap: 8px; min-width: 0; }
+.finding h4 { font-size: 1.08rem; font-weight: 700; font-stretch: 104%; }
+.finding p { font-size: .98rem; color: var(--ink-2); }
+.so { font-size: .95rem !important; color: var(--ink) !important; padding-left: 12px; border-left: 2px solid var(--case); }
+.so em { font-family: var(--f-mono); font-style: normal; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--case); margin-right: 6px; }
+
+.share { display: grid; gap: 8px; margin-top: 4px; }
+.share-bar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; background: var(--sunken); }
+.share-bar i { display: block; height: 100%; }
+.share-bar i + i { border-left: 2px solid var(--surface); }
+.share-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; list-style: none; margin: 0; padding: 0; font-family: var(--f-mono); font-size: .72rem; color: var(--ink-2); }
+.share-legend li { display: flex; align-items: center; gap: 6px; }
+.share-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.s1 { background: var(--case); }
+.s2 { background: color-mix(in srgb, var(--case) 70%, var(--surface)); }
+.s3 { background: color-mix(in srgb, var(--case) 38%, var(--surface)); }
+.s4 { background: color-mix(in srgb, var(--ink-3) 30%, var(--surface)); }
+
+/* checks log */
+.checks { min-width: 0; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); }
+.log { width: 100%; border-collapse: collapse; font-size: .93rem; min-width: 640px; }
+.log th, .log td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.log thead th { font-family: var(--f-mono); font-size: .7rem; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); background: var(--sunken); }
+.log tbody tr:last-child td { border-bottom: 0; }
+.log td:first-child { font-weight: 600; width: 26%; }
+.log td.res { font-family: var(--f-mono); font-size: .82rem; font-variant-numeric: tabular-nums; width: 30%; }
+.state { display: inline-block; font-family: var(--f-mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; padding: 1px 6px; border-radius: 4px; margin-right: 6px; vertical-align: 1px; }
+.state.pass { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+.state.flag { background: color-mix(in srgb, var(--flag) 15%, transparent); color: var(--flag); }
+.log td:last-child { color: var(--ink-2); }
+
+/* ---------- method ---------- */
+.principles { display: grid; gap: 0; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--ink); }
+@media (min-width: 860px) { .principles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.principle { display: grid; gap: 10px; padding: 22px 0; border-bottom: 1px solid var(--rule); align-content: start; }
+@media (min-width: 860px) { .principle { padding: 24px 28px 8px 0; border-bottom: 0; } .principle + .principle { padding-left: 28px; border-left: 1px solid var(--rule); } }
+.principle h3 { font-size: var(--step-1); font-stretch: 106%; font-weight: 750; }
+.principle p { color: var(--ink-2); font-size: .98rem; }
+.principle .eg { font-family: var(--f-mono); font-size: .78rem; color: var(--ink); background: var(--sunken); padding: 10px 12px; border-radius: 6px; line-height: 1.55; }
+
+/* ---------- about ---------- */
+.about-grid { display: grid; gap: clamp(32px, 5vw, 64px); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.prose { display: grid; gap: 16px; max-width: 62ch; }
+.prose p { color: var(--ink-2); }
+.prose p:first-child { color: var(--ink); font-size: var(--step-1); line-height: 1.5; }
+.timeline { list-style: none; margin: 8px 0 0; padding: 0; display: grid; }
+.timeline li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.timeline li:last-child { border-bottom: 1px solid var(--rule); }
+.timeline b { font-family: var(--f-display); font-weight: 700; }
+.timeline span { color: var(--ink-2); font-size: .95rem; }
+.timeline time, .timeline .when { font-family: var(--f-mono); font-size: .78rem; color: var(--ink-3); grid-row: 1; grid-column: 2; white-space: nowrap; }
+.skills { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.skill { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+@media (min-width: 560px) { .skill { grid-template-columns: 8.5rem minmax(0, 1fr); } }
+.skill dt { font-family: var(--f-display); font-weight: 700; margin: 0; }
+.skill dd { margin: 0; color: var(--ink-2); font-size: .95rem; }
+
+/* ---------- contact ---------- */
+.contact { background: var(--band); color: var(--band-ink); }
+.contact .wrap { display: grid; gap: 28px; }
+.contact h2 { font-size: var(--step-4); font-stretch: 118%; font-weight: 800; letter-spacing: -.025em; max-width: 16ch; }
+.contact .contact-text { color: color-mix(in srgb, var(--band-ink) 80%, var(--band)); max-width: 52ch; font-size: var(--step-1); }
+.contact .label { color: color-mix(in srgb, var(--band-ink) 65%, var(--band)); }
+.contact-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
+.contact-list { display: grid; grid-template-columns: minmax(0, 1fr); margin: 0; border-top: 1px solid var(--band-line); }
+@media (min-width: 760px) { .contact-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; } }
+.c-item { display: grid; gap: 6px; padding: 16px 0; border-bottom: 1px solid var(--band-line); min-width: 0; }
+.c-item dd { margin: 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; min-width: 0; }
+.c-val { font-family: var(--f-mono); font-size: clamp(1rem, .9rem + .5vw, 1.2rem); font-weight: 500; color: var(--band-ink); text-decoration: none; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; user-select: all; }
+a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
+.c-copy { font-family: var(--f-mono); font-size: .72rem; letter-spacing: .04em; min-height: 30px; padding: 0 10px; border-radius: 6px; cursor: pointer; background: transparent; color: var(--band-ink); border: 1px solid var(--band-line); }
+.c-copy:hover { border-color: var(--band-ink); }
+.contact .btn { background: transparent; color: var(--band-ink); border-color: var(--band-line); }
+.contact .btn:hover { border-color: var(--band-ink); }
+.contact .btn-primary { background: var(--band-ink); color: var(--band); border-color: var(--band-ink); }
+.mailbox .btn { min-height: 38px; padding: 0 12px; font-size: .85rem; }
+.foot { padding-block: 28px 40px; font-size: .85rem; color: var(--ink-3); }
+.foot .wrap { display: grid; gap: 8px; }
+.foot p { max-width: 80ch; }
+
+/* ---------- lightbox ---------- */
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1600px, 96vw); width: 96vw; max-height: 96vh; }
+.lightbox::backdrop { background: rgba(4, 10, 14, .86); }
+.lb-inner { display: grid; gap: 10px; }
+.lb-inner img { width: 100%; max-height: calc(96vh - 70px); object-fit: contain; border-radius: 6px; background: var(--stage); }
+.lb-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #E3EBED; font-family: var(--f-mono); font-size: .82rem; }
+.lb-bar .lb-btns { display: flex; gap: 8px; }
+.lb-bar button { font-family: var(--f-mono); font-size: .8rem; min-height: 38px; padding: 0 12px; border-radius: 6px; border: 1px solid rgba(227, 235, 237, .35); background: rgba(15, 28, 38, .7); color: #E3EBED; cursor: pointer; }
+
+
+/* photo */
+.brand-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid var(--rule); background: var(--stage); }
+.hero-id { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.portrait {
+  width: clamp(104px, 11vw, 148px); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 18px;
+  border: 1px solid var(--rule); background: var(--stage); box-shadow: var(--shadow); flex: none;
+}
+.id-text { display: grid; gap: 10px; min-width: 0; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: .8rem; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 999px; padding: 5px 12px 5px 10px; width: fit-content; }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 22%, transparent); }
+
+/* problem / solution */
+.ps { display: grid; grid-template-columns: minmax(0, 1fr); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
+@media (min-width: 920px) { .ps { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.ps-card { display: grid; gap: 16px; align-content: start; padding: clamp(20px, 3vw, 28px); min-width: 0; }
+.ps-solution { background: var(--case-soft); border-top: 1px solid var(--rule); }
+@media (min-width: 920px) { .ps-solution { border-top: 0; border-left: 1px solid var(--rule); } }
+.ps-label { display: flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.ps-dot { width: 10px; height: 10px; border-radius: 2px; background: var(--flag); }
+.ps-solution .ps-dot { background: var(--case); border-radius: 50%; }
+.ps-solution .ps-label { color: var(--ink); }
+.ps-lead { font-size: var(--step-0); line-height: 1.6; color: var(--ink); }
+.qs, .deliv { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.qs li { display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid var(--rule); font-size: .97rem; }
+.q { font-family: var(--f-mono); font-size: .78rem; font-weight: 600; color: var(--flag); padding-top: 2px; }
+.deliv li { display: grid; gap: 2px; padding: 10px 0; border-top: 1px solid color-mix(in srgb, var(--case) 22%, var(--rule)); font-size: .95rem; color: var(--ink-2); }
+.deliv b { font-family: var(--f-display); font-weight: 700; color: var(--ink); font-size: .98rem; }
+.ps-foot { display: grid; gap: 4px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: .97rem; color: var(--ink); }
+.ps-solution .ps-foot { border-top-color: color-mix(in srgb, var(--case) 35%, var(--rule)); }
+.fig-q { font-family: var(--f-mono); font-size: .68rem; font-weight: 600; color: var(--flag); margin-top: 4px; }
+.fig-q::before { content: "Answers "; font-weight: 400; color: var(--ink-3); }
+
+/* recommendations */
+.rec-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); counter-reset: rec; }
+@media (min-width: 760px) { .rec-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rec { counter-increment: rec; display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--case); border-radius: var(--radius); min-width: 0; }
+.rec-owner { font-family: var(--f-mono); font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--case); }
+.rec-owner::before { content: counter(rec, decimal-leading-zero) "  ·  "; color: var(--ink-3); white-space: pre; }
+.rec b { font-family: var(--f-display); font-weight: 700; font-size: 1.04rem; line-height: 1.35; }
+.rec p { font-size: .95rem; color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="P M Akshay Kumar Reddy, back to top">
+      <img class="brand-avatar" src="akshay-avatar.webp" width="192" height="192" alt="">
+      <span class="brand-name">Akshay Kumar Reddy</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="name">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="hero-id">
+          <img class="portrait" src="akshay-portrait.webp" width="640" height="640" alt="Portrait of P M Akshay Kumar Reddy">
+          <div class="id-text">
+            <p class="label">Data Analyst · Hyderabad, India</p>
+            <p class="status"><span class="status-dot" aria-hidden="true"></span>Open to entry-level data analyst roles</p>
+          </div>
+        </div>
+        <h1 id="name"><span class="pm">P M</span>Akshay Kumar Reddy</h1>
+        <p class="lede">I build dashboards in <strong>Excel, Power BI and Tableau</strong> on data I have cleaned and modelled in <strong>SQL</strong>. Before anything ships, every headline number is checked against the source.</p>
+        <ul class="facts">
+          <li>BBA, ICFAI Foundation for Higher Education</li>
+          <li>8 months at Accenture, Trust &amp; Safety</li>
+          <li>2 end-to-end analytics case studies</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-primary" href="#work">See the case studies
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/akshay-kumar-reddy-27080331a/" target="_blank" rel="noopener">LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <figure class="ledger" aria-labelledby="ledger-title">
+        <div class="ledger-head">
+          <h2 id="ledger-title">Same data, same answer, in every tool</h2>
+          <span class="label">AXON Manufacturing · FY2015</span>
+        </div>
+        <div class="ledger-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col">KPI</th><th scope="col" class="v">Value</th><th scope="col" class="c">MySQL</th><th scope="col" class="c">Power BI</th><th scope="col" class="c">Tableau</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Work orders</td><td class="v">10,000</td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+              <tr><td>Produced units</td><td class="v">60,050,621</td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+              <tr><td>Rejected units</td><td class="v">491,023</td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+              <tr><td>Rejection rate</td><td class="v">0.82%</td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+              <tr><td>On-time delivery</td><td class="v">32.94%</td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td><td class="c"><span class="tick" aria-label="matches"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="ledger-foot"><b>17 / 17 PASS</b> Power BI KPIs within ±0.1% of the SQL load. Tableau also matched SQL on six filtered slices, such as D01 Footwear in March: 235 work orders.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Case studies</p>
+        <h2 id="work-title">Two projects, taken from raw tables to checked dashboards</h2>
+        <p>Both started as team capstones on training datasets. Each case study says which parts I did myself and which parts the team did.</p>
+      </div>
+
+      <ol class="index" aria-label="Case study index" style="list-style:none">
+        <li class="case-mfg"><a href="#manufacturing">
+          <span class="idx-title">AXON Manufacturing</span>
+          <span class="idx-meta">Production, quality and delivery · 10,000 work orders · MySQL, Excel, Power BI, Tableau</span>
+          <span class="idx-go">Read ↓</span>
+        </a></li>
+        <li class="case-hc"><a href="#healthcare">
+          <span class="idx-title">AXON Healthcare</span>
+          <span class="idx-meta">Clinical operations and revenue cycle · 10,000 patients · Excel, MySQL, Power BI, Tableau</span>
+          <span class="idx-go">Read ↓</span>
+        </a></li>
+      </ol>
+
+      <!-- ===================== MANUFACTURING ===================== -->
+      <article class="case case-mfg" id="manufacturing" aria-labelledby="mfg-title">
+        <div class="case-head">
+          <p class="kicker"><span class="swatch" aria-hidden="true"></span><span class="label">Case study 1 · Manufacturing</span></p>
+          <h3 id="mfg-title">AXON Manufacturing <span>Production, quality and delivery analytics for a garment-trims plant</span></h3>
+          <p class="case-summary">One year of work orders from a plant that makes footwear, knitwear, printed fabric and woven labels for four fashion buyers, turned into a validated data model and three reporting layers.</p>
+        </div>
+
+        <dl class="meta">
+          <div><dt class="label">Context</dt><dd>Team capstone, 7 members<br>Training dataset, 2026</dd></div>
+          <div><dt class="label">My role</dt><dd>Presented the team's Excel dashboard and part of the Power BI report. Built the Tableau edition on my own.</dd></div>
+          <div><dt class="label">Data</dt><dd><span class="num">10,000</span> work orders · 1 Jan–31 Dec 2015 · 4 departments · 86 machines · 10 operations · 4 buyers</dd></div>
+          <div><dt class="label">Tools</dt><dd class="chips"><span class="chip">MySQL 8</span><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">Tableau</span></dd></div>
+        </dl>
+
+        <div class="ps">
+          <section class="ps-card ps-problem" aria-labelledby="mfg-problem">
+            <h4 class="ps-label" id="mfg-problem"><span class="ps-dot" aria-hidden="true"></span>Business problem</h4>
+            <p class="ps-lead">Plant managers had one flat export of 10,679 rows and no reporting layer. Output, quality and delivery couldn't be tracked in one place, or traced back to the machines, operations and buyers behind them.</p>
+            <ol class="qs" aria-label="Business questions">
+              <li><span class="q">Q1</span>Are we producing what buyers order, month by month?</li>
+              <li><span class="q">Q2</span>Which machines, operations and departments drive rejected units?</li>
+              <li><span class="q">Q3</span>Are orders delivered on time, and does it differ by buyer or department?</li>
+              <li><span class="q">Q4</span>What is the recorded production value per unit, by operation and department?</li>
+            </ol>
+            <p class="ps-foot"><span class="label">Stakeholders</span>Plant head, production planning, quality and maintenance, buyer account team</p>
+          </section>
+          <section class="ps-card ps-solution" aria-labelledby="mfg-solution">
+            <h4 class="ps-label" id="mfg-solution"><span class="ps-dot" aria-hidden="true"></span>Solution</h4>
+            <p class="ps-lead">A cleaned star-schema model in MySQL feeding an Excel brief, a Power BI report and a Tableau workbook, with every headline KPI reconciled back to SQL before release.</p>
+            <ul class="deliv" aria-label="Deliverables">
+              <li><b>Data model</b>1 fact table and 8 dimensions with foreign keys, a clean reporting view and 15 KPI queries in MySQL 8.0</li>
+              <li><b>Power BI report</b>6 pages and 4 tooltip pages, 48 DAX measures and a data governance page</li>
+              <li><b>Tableau workbook</b>4 dashboards, 16 KPI cards, 24 charts, cross-filters and one-click reset</li>
+              <li><b>Data-quality log</b>Every fix and exception recorded with row counts</li>
+            </ul>
+            <p class="ps-foot"><span class="label">Outcome</span>All four questions answered in a few clicks for any month, department, machine or operation, with figures that match the SQL source exactly.</p>
+          </section>
+        </div>
+
+        <div class="gallery" aria-label="Dashboards">
+        <div class="g-tabs" role="tablist" aria-label="Choose a tool">
+        <button class="g-tab" role="tab" id="tab-mfg-tableau" aria-controls="panel-mfg-tableau" aria-selected="true" tabindex="0">Tableau · 4 dashboards · Built by me</button>
+        <button class="g-tab" role="tab" id="tab-mfg-powerbi" aria-controls="panel-mfg-powerbi" aria-selected="false" tabindex="-1">Power BI · 6 pages · Team report</button>
+        </div>
+        <div class="g-panel" id="panel-mfg-tableau" role="tabpanel" aria-labelledby="tab-mfg-tableau" data-label="AXON Manufacturing · Tableau">
+        <figure class="stage"><div class="stage-frame" style="--ratio: 1600 / 888">
+        <a class="stage-link" href="mfg-tab-executive.webp" target="_blank" rel="noopener" aria-label="Open full size"><img src="mfg-tab-executive.webp" width="1600" height="888" alt="Tableau dashboard: Executive Overview. Year totals for volume, rejects and on-time delivery, output by department and the ten machines with the most rejected units."></a>
+        <button class="stage-nav prev" type="button" aria-label="Previous dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="stage-nav next" type="button" aria-label="Next dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+        <figcaption><span class="g-count">1 / 4</span><strong class="g-title">Executive Overview</strong><span class="g-desc">Year totals for volume, rejects and on-time delivery, output by department and the ten machines with the most rejected units.</span></figcaption>
+        </figure>
+        <ul class="thumbs" aria-label="Tableau dashboards">
+        <li><button class="thumb" type="button" aria-current="true" data-src="mfg-tab-executive.webp" data-w="1600" data-h="888" data-title="Executive Overview" data-desc="Year totals for volume, rejects and on-time delivery, output by department and the ten machines with the most rejected units." data-alt="Tableau dashboard: Executive Overview. Year totals for volume, rejects and on-time delivery, output by department and the ten machines with the most rejected units."><img src="mfg-tab-executive-sm.webp" width="480" height="266" alt=""><span>Executive Overview</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-tab-production.webp" data-w="1600" data-h="888" data-title="Production" data-desc="Ordered, processed and produced units by month and stage, utilization by operation and the monthly efficiency trend." data-alt="Tableau dashboard: Production. Ordered, processed and produced units by month and stage, utilization by operation and the monthly efficiency trend."><img src="mfg-tab-production-sm.webp" width="480" height="266" alt=""><span>Production</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-tab-quality.webp" data-w="1600" data-h="888" data-title="Quality" data-desc="Rejection rate by month, operation, department and item category, with the machines that reject the most units." data-alt="Tableau dashboard: Quality. Rejection rate by month, operation, department and item category, with the machines that reject the most units."><img src="mfg-tab-quality-sm.webp" width="480" height="266" alt=""><span>Quality</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-tab-delivery-cost.webp" data-w="1600" data-h="888" data-title="Delivery &amp; Cost" data-desc="On-time delivery by month, department and buyer, and recorded value per produced unit by operation." data-alt="Tableau dashboard: Delivery &amp; Cost. On-time delivery by month, department and buyer, and recorded value per produced unit by operation."><img src="mfg-tab-delivery-cost-sm.webp" width="480" height="266" alt=""><span>Delivery &amp; Cost</span></button></li>
+        </ul></div>
+        <div class="g-panel" id="panel-mfg-powerbi" role="tabpanel" aria-labelledby="tab-mfg-powerbi" data-label="AXON Manufacturing · Power BI" hidden>
+        <figure class="stage"><div class="stage-frame" style="--ratio: 1600 / 1284">
+        <a class="stage-link" href="mfg-pbi-production.webp" target="_blank" rel="noopener" aria-label="Open full size"><img src="mfg-pbi-production.webp" width="1600" height="1119" alt="Power BI dashboard: Production &amp; Efficiency. Six KPI cards, monthly output, produced against ordered units by quarter and a department summary table." loading="lazy"></a>
+        <button class="stage-nav prev" type="button" aria-label="Previous dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="stage-nav next" type="button" aria-label="Next dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+        <figcaption><span class="g-count">1 / 6</span><strong class="g-title">Production &amp; Efficiency</strong><span class="g-desc">Six KPI cards, monthly output, produced against ordered units by quarter and a department summary table.</span></figcaption>
+        </figure>
+        <ul class="thumbs" aria-label="Power BI dashboards">
+        <li><button class="thumb" type="button" aria-current="true" data-src="mfg-pbi-production.webp" data-w="1600" data-h="1119" data-title="Production &amp; Efficiency" data-desc="Six KPI cards, monthly output, produced against ordered units by quarter and a department summary table." data-alt="Power BI dashboard: Production &amp; Efficiency. Six KPI cards, monthly output, produced against ordered units by quarter and a department summary table."><img src="mfg-pbi-production-sm.webp" width="480" height="336" alt=""><span>Production &amp; Efficiency</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-pbi-delivery.webp" data-w="1600" data-h="1114" data-title="Delivery &amp; Customers" data-desc="Delivery status mix, on-time and late delivery by buyer, and a buyer service summary." data-alt="Power BI dashboard: Delivery &amp; Customers. Delivery status mix, on-time and late delivery by buyer, and a buyer service summary."><img src="mfg-pbi-delivery-sm.webp" width="480" height="334" alt=""><span>Delivery &amp; Customers</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-pbi-quality.webp" data-w="1600" data-h="1182" data-title="Quality &amp; Rejection" data-desc="Rejected units and rates by department, operation and employee level, with the monthly rejection trend." data-alt="Power BI dashboard: Quality &amp; Rejection. Rejected units and rates by department, operation and employee level, with the monthly rejection trend."><img src="mfg-pbi-quality-sm.webp" width="480" height="355" alt=""><span>Quality &amp; Rejection</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-pbi-machine.webp" data-w="1600" data-h="1284" data-title="Machine &amp; Operator Drill-down" data-desc="Machines ranked by rejected units, and order volume against rejection rate for machines with 50+ orders." data-alt="Power BI dashboard: Machine &amp; Operator Drill-down. Machines ranked by rejected units, and order volume against rejection rate for machines with 50+ orders."><img src="mfg-pbi-machine-sm.webp" width="480" height="385" alt=""><span>Machine &amp; Operator Drill-down</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-pbi-cost.webp" data-w="1600" data-h="1114" data-title="Cost View" data-desc="Manufacturing cost per unit by department and buyer, monthly cost trend and a cost summary table." data-alt="Power BI dashboard: Cost View. Manufacturing cost per unit by department and buyer, monthly cost trend and a cost summary table."><img src="mfg-pbi-cost-sm.webp" width="480" height="334" alt=""><span>Cost View</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="mfg-pbi-governance.webp" data-w="1600" data-h="1091" data-title="Data Governance" data-desc="17 KPIs compared with the SQL load at ±0.1% tolerance, row counts for every table and the data-quality flags kept from SQL." data-alt="Power BI dashboard: Data Governance. 17 KPIs compared with the SQL load at ±0.1% tolerance, row counts for every table and the data-quality flags kept from SQL."><img src="mfg-pbi-governance-sm.webp" width="480" height="327" alt=""><span>Data Governance</span></button></li>
+        </ul></div>
+        <p class="g-hint">Click a dashboard to open it full size. Use the arrows or thumbnails to page through.</p>
+        </div>
+
+        <div class="case-body">
+          <section aria-labelledby="mfg-how">
+            <h4 class="block-title" id="mfg-how">How it was built</h4>
+            <ol class="steps">
+              <li><b>Clean the source <span class="who">Team</span></b><p>Removed 679 blank rows from 10,679, logged two source exceptions and split the data into one fact table and eight dimensions.</p></li>
+              <li><b>Model in MySQL <span class="who">Team</span></b><p>Star schema with eight foreign keys and a clean reporting view. Fifteen KPI queries ran on MySQL 8.0.</p></li>
+              <li><b>Excel dashboard <span class="who me">Presented</span></b><p>KPI cards, charts and slicers for an executive summary, built on the cleaned data.</p></li>
+              <li><b>Power BI report <span class="who me">Presented</span></b><p>Six pages and four tooltip pages on an 11-table model with 48 DAX measures, plus a data governance page.</p></li>
+              <li><b>Tableau edition <span class="who me">Built by me</span></b><p>Four dashboards with 16 KPI cards and 24 charts. Filters for month, department, machine and operation, and a one-click reset built with parameter actions.</p></li>
+              <li><b>Reconcile <span class="who me">Built by me</span></b><p>Checked the Tableau KPIs against SQL for the full year and for six filtered slices before calling it done.</p></li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="mfg-find">
+            <h4 class="block-title" id="mfg-find">Key insights</h4>
+            <div class="findings">
+              <div class="finding">
+                <div class="fig"><span class="fig-n">30.2%</span><span class="fig-l">of rejected units come from two machines</span><span class="fig-q">Q2</span></div>
+                <div class="finding-text">
+                  <h4>Rejects follow volume, not weak machines</h4>
+                  <p>MC027 and MC026 account for 30.2% of the 491,023 rejected units, and the top ten machines for 65.8%. They are also the busiest machines. Across the 35 machines with 50 or more orders, rejection rates stay between 0.70% and 0.98%.</p>
+                  <div class="share">
+                    <div class="share-bar" role="img" aria-label="Share of rejected units: MC027 16.3%, MC026 13.9%, next eight machines 35.6%, all other machine codes 34.2%">
+                      <i class="s1" style="width:16.30%"></i><i class="s2" style="width:13.94%"></i><i class="s3" style="width:35.59%"></i><i class="s4" style="width:34.17%"></i>
+                    </div>
+                    <ul class="share-legend" aria-hidden="true">
+                      <li><i class="s1"></i>MC027 16.3%</li><li><i class="s2"></i>MC026 13.9%</li><li><i class="s3"></i>Next 8 machines 35.6%</li><li><i class="s4"></i>Other 77 codes 34.2%</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">32.94%</span><span class="fig-l">of orders delivered on time</span><span class="fig-q">Q3</span></div>
+                <div class="finding-text">
+                  <h4>Late delivery is spread evenly</h4>
+                  <p>On-time, early and late each hold about a third of orders. On-time delivery ranges only from 31.74% (Nike) to 34.59% (Zara) across buyers, and from 31.93% (Footwear) to 33.55% (Knitwear) across departments.</p>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">100.05%</span><span class="fig-l">production efficiency (produced ÷ processed)</span><span class="fig-q">Q1</span></div>
+                <div class="finding-text">
+                  <h4>An efficiency above 100% pointed to a data rule</h4>
+                  <p>4,997 orders record more produced units than processed units, which lifts efficiency above 100%. I kept the source values and explained the rule in the dashboard footnote.</p>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">14.9M</span><span class="fig-l">units ordered but not recorded as processed</span><span class="fig-q">Q1</span></div>
+                <div class="finding-text">
+                  <h4>Processing falls a fifth short of orders</h4>
+                  <p>74.93M units were ordered and 60.02M processed, a recorded gap of 14,910,992 units. Machine utilization (processed ÷ ordered) is 80.10% for the year.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="recs" aria-labelledby="mfg-recs">
+          <h4 class="block-title" id="mfg-recs">Recommendations</h4>
+          <ol class="rec-list">
+            <li class="rec"><span class="rec-owner">Maintenance &amp; quality</span><b>Put inspection and preventive maintenance first on MC027 and MC026.</b><p>They produce 30.2% of rejected units at normal rejection rates, so each point of improvement there saves the most units. Rank machines by rate as well as volume.</p></li>
+            <li class="rec"><span class="rec-owner">Production planning</span><b>Review how promised delivery dates are set.</b><p>About a third of orders are late for every buyer and every department, which points to the scheduling rule rather than one account.</p></li>
+            <li class="rec"><span class="rec-owner">Data owners</span><b>Fix how produced and processed quantities are captured.</b><p>4,997 orders show more produced than processed units. Efficiency shouldn't become a target until the rule is confirmed.</p></li>
+            <li class="rec"><span class="rec-owner">Operations</span><b>Track the ordered-to-processed gap every month, by operation.</b><p>A 14.9M-unit gap (80.10% utilization) shows capacity running short; the monthly view shows where and when.</p></li>
+          </ol>
+        </section>
+
+        <section class="checks" aria-labelledby="mfg-checks">
+          <h4 class="block-title" id="mfg-checks">Validation and data issues</h4>
+          <div class="table-scroll">
+            <table class="log">
+              <thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">What was done</th></tr></thead>
+              <tbody>
+                <tr><td>Power BI KPIs vs SQL load</td><td class="res"><span class="state pass">Pass</span>17 of 17 within ±0.1%</td><td>All variances 0.0000%. Shown on the report's Data Governance page.</td></tr>
+                <tr><td>Tableau KPIs vs SQL</td><td class="res"><span class="state pass">Pass</span>Full year + 6 filtered slices</td><td>E.g. D01 Footwear: 2,512 orders and 15,121,198 produced units in every tool.</td></tr>
+                <tr><td>Blank source rows</td><td class="res"><span class="state flag">Fixed</span>679 of 10,679 rows</td><td>Removed in SQL before loading. 10,000 work orders remain.</td></tr>
+                <tr><td>Missing machine code</td><td class="res"><span class="state flag">Kept</span>1 order</td><td>Kept in every total and labelled Unknown in machine charts.</td></tr>
+                <tr><td>Machine–operation mismatch</td><td class="res"><span class="state flag">Kept</span>1 order (MC025)</td><td>Order lists OP011, machine table lists OP002. Source codes kept and flagged for confirmation.</td></tr>
+                <tr><td>Produced above processed</td><td class="res"><span class="state flag">Noted</span>4,997 orders</td><td>Explained in the efficiency footnote rather than capped.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+
+      <!-- ===================== HEALTHCARE ===================== -->
+      <article class="case case-hc" id="healthcare" aria-labelledby="hc-title">
+        <div class="case-head">
+          <p class="kicker"><span class="swatch" aria-hidden="true"></span><span class="label">Case study 2 · Healthcare</span></p>
+          <h3 id="hc-title">AXON Healthcare <span>Clinical operations and revenue cycle analytics</span></h3>
+          <p class="case-summary">Two years of electronic medical records across ten linked tables, turned into validated clinical and revenue-cycle dashboards with a clear record of what the data can and cannot support.</p>
+        </div>
+
+        <dl class="meta">
+          <div><dt class="label">Context</dt><dd>Team capstone, 7 members<br>Training EMR dataset, 2026</dd></div>
+          <div><dt class="label">My role</dt><dd>Wrote and presented the SQL validation and KPI queries and the key takeaways. Later rebuilt the Power BI, Tableau and SQL layers on my own.</dd></div>
+          <div><dt class="label">Data</dt><dd><span class="num">10,000</span> patients and visits · 1,000 doctors · 5 departments · 10 tables · 22 Mar 2023–21 Mar 2025</dd></div>
+          <div><dt class="label">Tools</dt><dd class="chips"><span class="chip">Excel · Power Pivot</span><span class="chip">MySQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span></dd></div>
+        </dl>
+
+        <div class="ps">
+          <section class="ps-card ps-problem" aria-labelledby="hc-problem">
+            <h4 class="ps-label" id="hc-problem"><span class="ps-dot" aria-hidden="true"></span>Business problem</h4>
+            <p class="ps-lead">A multi-department hospital kept patients, doctors, visits, treatments, lab tests, billing, insurance policies and claims in ten separate tables. Leadership had no single view of care activity or the revenue cycle, and no way to tell which numbers the data could actually support.</p>
+            <ol class="qs" aria-label="Business questions">
+              <li><span class="q">Q1</span>How many visits are completed, cancelled or still scheduled, by department and month?</li>
+              <li><span class="q">Q2</span>How is the workload spread across 1,000 doctors and five departments?</li>
+              <li><span class="q">Q3</span>How much is billed, paid by patients and still outstanding?</li>
+              <li><span class="q">Q4</span>How often are insurance claims approved or denied, and how long do they take?</li>
+            </ol>
+            <p class="ps-foot"><span class="label">Stakeholders</span>Hospital operations lead, department heads, billing and revenue-cycle team</p>
+          </section>
+          <section class="ps-card ps-solution" aria-labelledby="hc-solution">
+            <h4 class="ps-label" id="hc-solution"><span class="ps-dot" aria-hidden="true"></span>Solution</h4>
+            <p class="ps-lead">Validated the ten tables in SQL, built clinical and revenue-cycle dashboards in Excel, Power BI and Tableau, and logged every data issue so no dashboard shows a KPI the data can't support.</p>
+            <ul class="deliv" aria-label="Deliverables">
+              <li><b>SQL validation</b>Row counts, orphan keys, duplicates, completeness and KPI reconciliation queries</li>
+              <li><b>Power BI report</b>9 pages covering clinical operations, doctors, labs, billing, claims and policies</li>
+              <li><b>Tableau workbook</b>9 dashboards, 36 KPI cards and 36 charts with filters and reset on every page</li>
+              <li><b>Documented SQL build</b>10 typed tables, 8 reporting views and 40 dashboard queries</li>
+            </ul>
+            <p class="ps-foot"><span class="label">Outcome</span>One place to track visits, doctor workload, billing and claims, with plain notes wherever the data falls short.</p>
+          </section>
+        </div>
+
+        <div class="gallery" aria-label="Dashboards">
+        <div class="g-panel" id="panel-hc-tableau" data-label="AXON Healthcare · Tableau">
+        <figure class="stage"><div class="stage-frame" style="--ratio: 1580 / 940">
+        <a class="stage-link" href="hc-tab-executive.webp" target="_blank" rel="noopener" aria-label="Open full size"><img src="hc-tab-executive.webp" width="1580" height="940" alt="Tableau dashboard: Executive Overview. Patients, visits, billed charges and visit completion, with monthly visits, department load, diagnosis mix and recorded outcomes."></a>
+        <button class="stage-nav prev" type="button" aria-label="Previous dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="stage-nav next" type="button" aria-label="Next dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+        <figcaption><span class="g-count">1 / 9</span><strong class="g-title">Executive Overview</strong><span class="g-desc">Patients, visits, billed charges and visit completion, with monthly visits, department load, diagnosis mix and recorded outcomes.</span></figcaption>
+        </figure>
+        <ul class="thumbs" aria-label="Tableau dashboards">
+        <li><button class="thumb" type="button" aria-current="true" data-src="hc-tab-executive.webp" data-w="1580" data-h="940" data-title="Executive Overview" data-desc="Patients, visits, billed charges and visit completion, with monthly visits, department load, diagnosis mix and recorded outcomes." data-alt="Tableau dashboard: Executive Overview. Patients, visits, billed charges and visit completion, with monthly visits, department load, diagnosis mix and recorded outcomes."><img src="hc-tab-executive-sm.webp" width="480" height="286" alt=""><span>Executive Overview</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-patients.webp" data-w="1580" data-h="940" data-title="Patient Analytics" data-desc="Age bands, chronic conditions, new registrations by month and recorded gender." data-alt="Tableau dashboard: Patient Analytics. Age bands, chronic conditions, new registrations by month and recorded gender."><img src="hc-tab-patients-sm.webp" width="480" height="286" alt=""><span>Patient Analytics</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-clinical.webp" data-w="1580" data-h="940" data-title="Clinical Operations" data-desc="Visit status and type, monthly visit volume and visits by department." data-alt="Tableau dashboard: Clinical Operations. Visit status and type, monthly visit volume and visits by department."><img src="hc-tab-clinical-sm.webp" width="480" height="286" alt=""><span>Clinical Operations</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-doctors.webp" data-w="1580" data-h="940" data-title="Doctor Performance" data-desc="Doctors by specialty, highest visit volumes and workload against completion rate." data-alt="Tableau dashboard: Doctor Performance. Doctors by specialty, highest visit volumes and workload against completion rate."><img src="hc-tab-doctors-sm.webp" width="480" height="286" alt=""><span>Doctor Performance</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-treatment.webp" data-w="1580" data-h="940" data-title="Treatment &amp; Outcomes" data-desc="Recorded outcomes, treatment types, average direct cost by type and medication records." data-alt="Tableau dashboard: Treatment &amp; Outcomes. Recorded outcomes, treatment types, average direct cost by type and medication records."><img src="hc-tab-treatment-sm.webp" width="480" height="286" alt=""><span>Treatment &amp; Outcomes</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-lab.webp" data-w="1580" data-h="940" data-title="Lab Test Analytics" data-desc="Result status, tests by name, monthly test volume and pending results by test." data-alt="Tableau dashboard: Lab Test Analytics. Result status, tests by name, monthly test volume and pending results by test."><img src="hc-tab-lab-sm.webp" width="480" height="286" alt=""><span>Lab Test Analytics</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-financial.webp" data-w="1580" data-h="940" data-title="Financial &amp; Billing" data-desc="Billed charges, patient paid and outstanding amounts, payment status and bills with reconciliation exceptions." data-alt="Tableau dashboard: Financial &amp; Billing. Billed charges, patient paid and outstanding amounts, payment status and bills with reconciliation exceptions."><img src="hc-tab-financial-sm.webp" width="480" height="286" alt=""><span>Financial &amp; Billing</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-claims.webp" data-w="1580" data-h="940" data-title="Insurance Claims" data-desc="Claim status, reasons on denied claims, full approval rate by provider and in- versus out-of-network claims." data-alt="Tableau dashboard: Insurance Claims. Claim status, reasons on denied claims, full approval rate by provider and in- versus out-of-network claims."><img src="hc-tab-claims-sm.webp" width="480" height="286" alt=""><span>Insurance Claims</span></button></li>
+        <li><button class="thumb" type="button" aria-current="false" data-src="hc-tab-policy.webp" data-w="1580" data-h="940" data-title="Policy &amp; Provider" data-desc="Policies by plan type and coverage tier, stored status labels and provider satisfaction." data-alt="Tableau dashboard: Policy &amp; Provider. Policies by plan type and coverage tier, stored status labels and provider satisfaction."><img src="hc-tab-policy-sm.webp" width="480" height="286" alt=""><span>Policy &amp; Provider</span></button></li>
+        </ul></div>
+        <p class="g-hint">Click a dashboard to open it full size. Use the arrows or thumbnails to page through.</p>
+        </div>
+
+        <div class="case-body">
+          <section aria-labelledby="hc-how">
+            <h4 class="block-title" id="hc-how">How it was built</h4>
+            <ol class="steps">
+              <li><b>Clean in Excel <span class="who">Team</span></b><p>Ten linked tables. Placeholder zero dates and zero lab values became blanks, and text IDs were fixed so they sort correctly.</p></li>
+              <li><b>Excel dashboard <span class="who">Team</span></b><p>Power Pivot model with DAX measures, PivotTables and slicers.</p></li>
+              <li><b>SQL validation <span class="who me">Built by me</span></b><p>MySQL queries for row counts, completeness, orphan keys, duplicates and query plans, then the KPI and reconciliation queries I presented.</p></li>
+              <li><b>Power BI rebuild <span class="who me">Built by me</span></b><p>Nine-page report with KPI cards, slicers and page navigation across clinical and revenue-cycle modules.</p></li>
+              <li><b>Tableau rebuild <span class="who me">Built by me</span></b><p>Nine dashboards with 36 charts and 36 KPI cards, filters, navigation and a reset control on every page.</p></li>
+              <li><b>Documented SQL build <span class="who me">Built by me</span></b><p>Ten typed tables, foreign keys, eight reporting views and 40 dashboard queries. Keys and currency totals were checked independently; a full MySQL server run is the next step.</p></li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="hc-find">
+            <h4 class="block-title" id="hc-find">Key insights</h4>
+            <div class="findings">
+              <div class="finding">
+                <div class="fig"><span class="fig-n">32.66%</span><span class="fig-l">of recorded visits completed</span><span class="fig-q">Q1</span></div>
+                <div class="finding-text">
+                  <h4>Visits split into three equal parts</h4>
+                  <p>Completed (3,266), cancelled (3,344) and scheduled (3,390) visits each make up about a third of the 10,000 visits. There are no appointment or check-in times, so waiting time and no-show rate cannot be measured.</p>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">42.98%</span><span class="fig-l">of billed charges recorded as patient-paid</span><span class="fig-q">Q3</span></div>
+                <div class="finding-text">
+                  <h4>The billing fields don't add up, so each is reported as recorded</h4>
+                  <p>Patients paid $10.92M of $25.41M billed, with $7.06M outstanding. In 4,042 bills, insurance covered + patient paid + outstanding differs from the billed amount by more than $0.02. The dashboards show each field as recorded and make no collection, profit or aging claims.</p>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">60.75%</span><span class="fig-l">of insurance claims fully approved</span><span class="fig-q">Q4</span></div>
+                <div class="finding-text">
+                  <h4>About one claim in eleven is denied</h4>
+                  <p>Of 10,000 claims, 6,075 were fully approved, 1,790 partly approved, 1,211 are pending and 924 were denied (9.24%). Processing takes 11.64 days on average across the 8,789 claims with both dates. Approved amounts are adjudicated values, not insurer cash.</p>
+                </div>
+              </div>
+
+              <div class="finding">
+                <div class="fig"><span class="fig-n">80.35%</span><span class="fig-l">of patients carry a chronic condition</span><span class="fig-q">Q2</span></div>
+                <div class="finding-text">
+                  <h4>Chronic care dominates the patient base</h4>
+                  <p>8,035 of 10,000 patients have a chronic flag, split almost evenly across hypertension, diabetes, asthma and arthritis. Average stored age is 48.94, and 49.84% of visits are flagged for follow-up.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="recs" aria-labelledby="hc-recs">
+          <h4 class="block-title" id="hc-recs">Recommendations</h4>
+          <ol class="rec-list">
+            <li class="rec"><span class="rec-owner">Operations</span><b>Report completion and cancellation together, and start capturing appointment and check-in times.</b><p>A third of visits are cancelled, and without timestamps the hospital can't measure no-shows or waiting time.</p></li>
+            <li class="rec"><span class="rec-owner">Billing team</span><b>Agree billing field definitions before launching a collection-rate KPI.</b><p>4,042 bills don't balance, so any collection rate built on them today would be misleading.</p></li>
+            <li class="rec"><span class="rec-owner">Revenue cycle</span><b>Compare provider approval and denial rates on the same denominator.</b><p>With 9.24% of claims denied and 17.9% only partly approved, fair provider rankings need one consistent base.</p></li>
+            <li class="rec"><span class="rec-owner">Clinical planning</span><b>Plan follow-up capacity around chronic patients.</b><p>80.35% of patients are chronic and half of all visits are flagged for follow-up, so repeat care drives the workload.</p></li>
+          </ol>
+        </section>
+
+        <section class="checks" aria-labelledby="hc-checks">
+          <h4 class="block-title" id="hc-checks">Validation and data issues</h4>
+          <div class="table-scroll">
+            <table class="log">
+              <thead><tr><th scope="col">Check</th><th scope="col">Result</th><th scope="col">What was done</th></tr></thead>
+              <tbody>
+                <tr><td>Billing equation (±$0.02)</td><td class="res"><span class="state flag">Flagged</span>4,042 bills fail</td><td>Fields shown as recorded. No collection, profit or aging KPIs.</td></tr>
+                <tr><td>Lab test date vs visit date</td><td class="res"><span class="state flag">Flagged</span>4,914 tests dated before their visit</td><td>Lab turnaround time is not reported.</td></tr>
+                <tr><td>Policy number uniqueness</td><td class="res"><span class="state flag">Kept</span>9,941 distinct numbers for 10,000 policies</td><td>All records kept with a surrogate key; policies counted by patient record.</td></tr>
+                <tr><td>Patient state vs city</td><td class="res"><span class="state flag">Removed</span>Conflicts for 8,025 patients</td><td>Maps left out because locations can't be trusted.</td></tr>
+                <tr><td>Event timestamps</td><td class="res"><span class="state flag">Missing</span>No appointment, check-in or result times</td><td>No waiting-time, no-show or turnaround KPIs.</td></tr>
+                <tr><td>Earlier team figures</td><td class="res"><span class="state pass">Corrected</span>$10.27M → $10.92M paid; 2,524 → 4,042 exceptions</td><td>Recomputed from the row-level data; the rebuild uses the corrected values.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="method" aria-labelledby="method-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Method</p>
+        <h2 id="method-title">How I work on a dashboard</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <h3>Match the numbers first</h3>
+          <p>Every headline KPI is computed separately in SQL and in the BI tool, for the full data and for filtered slices, before any design work starts.</p>
+          <p class="eg">D01 Footwear + March<br>SQL 235 orders · Tableau 235 orders</p>
+        </div>
+        <div class="principle">
+          <h3>Keep the exceptions visible</h3>
+          <p>Data problems go into a log and onto the dashboard as footnotes: what the issue is, how many rows it touches, and what was done about it.</p>
+          <p class="eg">4,042 billing equation failures<br>→ no collection-rate KPI</p>
+        </div>
+        <div class="principle">
+          <h3>Use AI, check by hand</h3>
+          <p>I use Claude and Codex to draft SQL, DAX, Tableau calculations and layouts. Each figure is then checked against query output before it goes on a dashboard.</p>
+          <p class="eg">Draft → query → compare → publish</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">About</p>
+        <h2 id="about-title">Business graduate, moving into analytics</h2>
+      </div>
+      <div class="about-grid">
+        <div class="prose">
+          <p>I studied business administration in Hyderabad and started my career in content operations at Accenture. I'm now working toward an entry-level data analyst role.</p>
+          <p>As a Trust &amp; Safety New Associate I reviewed more than 100 cases a day against policy and kept a 98%+ accuracy score in a team of more than 20. The job ran on internal dashboards and Excel trend reports, which is where my interest in data started.</p>
+          <p>The two capstones above taught me the full path from raw tables to a dashboard someone can rely on. I'm learning Python next.</p>
+          <ol class="timeline" aria-label="Experience and education">
+            <li><b>Data analytics capstones</b><span>AXON Manufacturing and AXON Healthcare, team projects plus solo rebuilds</span><span class="when">2026</span></li>
+            <li><b>Accenture</b><span>Trust &amp; Safety New Associate</span><span class="when">8 months</span></li>
+            <li><b>ICFAI Foundation for Higher Education, Hyderabad</b><span>Bachelor of Business Administration</span><span class="when">2022–2025</span></li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="block-title">Tools and where I've used them</h3>
+          <dl class="skills">
+            <div class="skill"><dt>Excel</dt><dd>Power Pivot data models, DAX measures, PivotTables, slicer-driven dashboards. Both projects.</dd></div>
+            <div class="skill"><dt>SQL</dt><dd>MySQL star schemas, foreign keys, reporting views, validation queries (orphans, duplicates, completeness) and KPI queries.</dd></div>
+            <div class="skill"><dt>Power BI</dt><dd>Multi-table models, DAX measures, tooltip pages, slicers, page navigation and a KPI reconciliation page.</dd></div>
+            <div class="skill"><dt>Tableau</dt><dd>Relationships, parameters, LOD expressions, filter and parameter actions, multi-dashboard navigation.</dd></div>
+            <div class="skill"><dt>AI tools</dt><dd>Claude, Codex and GitHub Copilot for drafting queries, measures and documentation.</dd></div>
+            <div class="skill"><dt>Presenting</dt><dd>Presented the SQL checks (healthcare) and the Excel and Power BI dashboards (manufacturing) to project reviewers.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <h2 id="contact-title">Hiring a junior data analyst?</h2>
+      <p class="contact-text">I'm based in Hyderabad and open to entry-level data analyst roles. Call, email or message me on LinkedIn.</p>
+      <dl class="contact-list">
+        <div class="c-item">
+          <dt class="label">Phone · Primary</dt>
+          <dd><a class="c-val" id="phone1" href="tel:+919347059321">+91 93470 59321</a><button class="c-copy" type="button" data-copy="phone1" aria-label="Copy primary phone number">Copy</button></dd>
+        </div>
+        <div class="c-item">
+          <dt class="label">Phone · Alternate</dt>
+          <dd><a class="c-val" id="phone2" href="tel:+919000501094">+91 90005 01094</a><button class="c-copy" type="button" data-copy="phone2" aria-label="Copy alternate phone number">Copy</button></dd>
+        </div>
+        <div class="c-item">
+          <dt class="label">Email</dt>
+          <dd><a class="c-val" id="email" href="mailto:pmakshaykumarreddy@gmail.com">pmakshaykumarreddy@gmail.com</a><button class="c-copy" type="button" data-copy="email" aria-label="Copy email address">Copy</button></dd>
+        </div>
+        <div class="c-item">
+          <dt class="label">Location</dt>
+          <dd><span class="c-val">Hyderabad, Telangana, India</span></dd>
+        </div>
+      </dl>
+      <div class="contact-row">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/akshay-kumar-reddy-27080331a/" target="_blank" rel="noopener">Message on LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Both projects use training datasets supplied for team capstones. Buyer, insurer and provider names come from those datasets and do not imply any relationship with the companies named. Patient-level personal details are not shown.</p>
+    <p>© 2026 P M Akshay Kumar Reddy</p>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Dashboard, full size">
+  <div class="lb-inner">
+    <div class="lb-bar">
+      <span id="lb-caption"></span>
+      <span class="lb-btns">
+        <button type="button" id="lb-prev" aria-label="Previous dashboard">← Prev</button>
+        <button type="button" id="lb-next" aria-label="Next dashboard">Next →</button>
+        <button type="button" id="lb-close">Close</button>
+      </span>
+    </div>
+    <img id="lb-img" alt="">
+  </div>
+</dialog>
+
+<script>
+(function () {
+  // ----- galleries -----
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-caption');
+  var activePanel = null;
+
+  function thumbsOf(panel) { return Array.prototype.slice.call(panel.querySelectorAll('.thumb')); }
+  function currentIndex(panel) { return thumbsOf(panel).findIndex(function (t) { return t.getAttribute('aria-current') === 'true'; }); }
+
+  function show(panel, i) {
+    var thumbs = thumbsOf(panel);
+    var n = thumbs.length;
+    i = (i + n) % n;
+    var t = thumbs[i];
+    thumbs.forEach(function (x, k) { x.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    var img = panel.querySelector('.stage-link img');
+    var link = panel.querySelector('.stage-link');
+    img.src = t.dataset.src;
+    img.width = +t.dataset.w; img.height = +t.dataset.h;
+    img.alt = t.dataset.alt;
+    link.href = t.dataset.src;
+    panel.querySelector('.g-count').textContent = (i + 1) + ' / ' + n;
+    panel.querySelector('.g-title').textContent = t.dataset.title;
+    panel.querySelector('.g-desc').textContent = t.dataset.desc;
+    if (lb.open && activePanel === panel) fillLightbox(panel);
+    var strip = t.closest('.thumbs');
+    var left = t.offsetLeft - strip.offsetLeft;
+    if (left < strip.scrollLeft || left + t.offsetWidth > strip.scrollLeft + strip.clientWidth) {
+      strip.scrollTo({ left: Math.max(0, left - 12), behavior: 'smooth' });
+    }
+  }
+
+  function fillLightbox(panel) {
+    var t = thumbsOf(panel)[currentIndex(panel)];
+    lbImg.src = t.dataset.src;
+    lbImg.alt = t.dataset.alt;
+    lbCap.textContent = panel.dataset.label + ' · ' + t.dataset.title + ' (' + (currentIndex(panel) + 1) + '/' + thumbsOf(panel).length + ')';
+  }
+
+  document.querySelectorAll('.g-panel').forEach(function (panel) {
+    thumbsOf(panel).forEach(function (t, i) { t.addEventListener('click', function () { show(panel, i); }); });
+    panel.querySelector('.stage-nav.prev').addEventListener('click', function () { show(panel, currentIndex(panel) - 1); });
+    panel.querySelector('.stage-nav.next').addEventListener('click', function () { show(panel, currentIndex(panel) + 1); });
+    panel.querySelector('.stage-link').addEventListener('click', function (e) {
+      if (typeof lb.showModal !== 'function') return;
+      e.preventDefault();
+      activePanel = panel;
+      fillLightbox(panel);
+      try { lb.showModal(); } catch (err) { window.open(this.href, '_blank'); }
+    });
+  });
+
+  document.querySelectorAll('.gallery').forEach(function (g) {
+    var tabs = Array.prototype.slice.call(g.querySelectorAll('.g-tab'));
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { select(i); });
+      tab.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          var j = (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+          select(j); tabs[j].focus();
+        }
+      });
+    });
+    function select(i) {
+      tabs.forEach(function (tab, k) {
+        tab.setAttribute('aria-selected', k === i ? 'true' : 'false');
+        tab.tabIndex = k === i ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = k !== i;
+      });
+    }
+  });
+
+  document.getElementById('lb-prev').addEventListener('click', function () { if (activePanel) show(activePanel, currentIndex(activePanel) - 1); });
+  document.getElementById('lb-next').addEventListener('click', function () { if (activePanel) show(activePanel, currentIndex(activePanel) + 1); });
+  document.getElementById('lb-close').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.open || !activePanel) return;
+    if (e.key === 'ArrowRight') show(activePanel, currentIndex(activePanel) + 1);
+    if (e.key === 'ArrowLeft') show(activePanel, currentIndex(activePanel) - 1);
+  });
+
+  // ----- copy contact details -----
+  document.querySelectorAll('.c-copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.dataset.copy);
+      var text = el.textContent.trim();
+      function selectText() {
+        var r = document.createRange(); r.selectNodeContents(el);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        btn.textContent = 'Selected';
+      }
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied'; }, selectText);
+        } else { selectText(); }
+      } catch (err) { selectText(); }
+      setTimeout(function () { btn.textContent = 'Copy'; }, 2200);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

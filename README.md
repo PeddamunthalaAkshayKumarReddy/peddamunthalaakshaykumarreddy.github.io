@@ -1,5 +1,7 @@
 # P M Akshay Kumar Reddy · Data Analyst Portfolio
 
+Live site: https://peddamunthalaakshaykumarreddy.github.io
+
 A one-page static site: `index.html` plus its images. No build step.
 
 ## Put it online for free

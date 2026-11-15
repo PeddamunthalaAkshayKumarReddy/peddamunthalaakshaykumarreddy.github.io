@@ -388,7 +388,7 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
     <div class="hero-copy">
       <p class="label eyebrow">P M Akshay Kumar Reddy · Data Analyst</p>
       <h1 id="hero-title">Data, <em>checked</em> before it's charted.</h1>
-      <p class="lede">I build dashboards in <strong>Excel, Power BI and Tableau</strong> on cleaned, modelled data stored in <strong>MySQL</strong>. Before anything ships, every headline number is checked against the source.</p>
+      <p class="lede">I build dashboards in <strong>Excel, Power BI and Tableau</strong> on data I have cleaned and modelled in <strong>SQL</strong>. Before anything ships, every headline number is checked against the source.</p>
       <div class="cta">
         <a class="btn btn-solid" href="#work">See the case studies <span aria-hidden="true">↓</span></a>
         <a class="btn btn-line" href="https://www.linkedin.com/in/akshay-kumar-reddy-27080331a/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
@@ -605,7 +605,7 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
 
         <dl class="meta rv">
           <div><dt>Context</dt><dd>Team capstone, 7 members<br>Training EMR dataset, 2026</dd></div>
-          <div class="meta-role"><dt>My role</dt><dd>Built the Excel dashboard on a Power Pivot model, a nine-page Power BI report and a nine-dashboard Tableau workbook, and presented the key takeaways.</dd></div>
+          <div class="meta-role"><dt>My role</dt><dd>Wrote and presented the SQL validation and KPI queries and the key takeaways. Later rebuilt the Power BI, Tableau and SQL layers on my own.</dd></div>
           <div><dt>Data</dt><dd><span class="num">10,000</span> patients and visits<br>1,000 doctors, 5 departments, 10 tables<br>22 Mar 2023 - 21 Mar 2025</dd></div>
           <div><dt>Tools</dt><dd class="tools"><span>Excel · Power Pivot</span><span>MySQL</span><span>Power BI</span><span>Tableau</span></dd></div>
         </dl>
@@ -624,12 +624,12 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
           </section>
           <section class="ps-card" aria-labelledby="hc-solution">
             <h4 class="ps-label" id="hc-solution">Solution</h4>
-            <p class="ps-lead">Built clinical and revenue-cycle dashboards in Excel, Power BI and Tableau on ten tables stored in MySQL, and logged every data issue so no dashboard shows a KPI the data can't support.</p>
+            <p class="ps-lead">Validated the ten tables in SQL, built clinical and revenue-cycle dashboards in Excel, Power BI and Tableau, and logged every data issue so no dashboard shows a KPI the data can't support.</p>
             <ul class="deliv" aria-label="Deliverables">
-              <li><b>Excel dashboard</b>Power Pivot model with DAX measures, KPI cards, charts and slicers</li>
+              <li><b>SQL validation</b>Row counts, orphan keys, duplicates, completeness and KPI reconciliation queries</li>
               <li><b>Power BI report</b>9 pages covering clinical operations, doctors, labs, billing, claims and policies</li>
               <li><b>Tableau workbook</b>9 dashboards, 36 KPI cards and 36 charts with filters and reset on every page</li>
-              <li><b>Data-issue log</b>Every data problem recorded with the rows affected and the action taken</li>
+              <li><b>Documented SQL build</b>10 typed tables, 8 reporting views and 40 dashboard queries</li>
             </ul>
             <p class="ps-foot"><span class="label">Outcome</span>One place to track visits, doctor workload, billing and claims, with plain notes wherever the data falls short.</p>
           </section>
@@ -665,10 +665,11 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
           <div class="block-title-wrap rv"><h4 class="block-title" id="hc-how">How it was built</h4></div>
           <ol class="steps rv">
             <li><div><div class="step-head"><b>Clean in Excel</b><span class="who">Team</span></div><p>Ten linked tables. Placeholder zero dates and zero lab values became blanks, and text IDs were fixed so they sort correctly.</p></div></li>
-            <li><div><div class="step-head"><b>Excel dashboard</b><span class="who me">Built by me</span></div><p>Power Pivot model with DAX measures, PivotTables and slicers.</p></div></li>
-            <li><div><div class="step-head"><b>Data in MySQL</b><span class="who">Team</span></div><p>The ten cleaned tables were stored in MySQL. Power BI and Tableau read from it, and its row counts and totals were used to check every dashboard.</p></div></li>
-            <li><div><div class="step-head"><b>Power BI report</b><span class="who me">Built by me</span></div><p>Nine-page report with KPI cards, slicers and page navigation across clinical and revenue-cycle modules.</p></div></li>
-            <li><div><div class="step-head"><b>Tableau workbook</b><span class="who me">Built by me</span></div><p>Nine dashboards with 36 charts and 36 KPI cards, filters, navigation and a reset control on every page.</p></div></li>
+            <li><div><div class="step-head"><b>Excel dashboard</b><span class="who">Team</span></div><p>Power Pivot model with DAX measures, PivotTables and slicers.</p></div></li>
+            <li><div><div class="step-head"><b>SQL validation</b><span class="who me">Built by me</span></div><p>MySQL queries for row counts, completeness, orphan keys, duplicates and query plans, then the KPI and reconciliation queries I presented.</p></div></li>
+            <li><div><div class="step-head"><b>Power BI rebuild</b><span class="who me">Built by me</span></div><p>Nine-page report with KPI cards, slicers and page navigation across clinical and revenue-cycle modules.</p></div></li>
+            <li><div><div class="step-head"><b>Tableau rebuild</b><span class="who me">Built by me</span></div><p>Nine dashboards with 36 charts and 36 KPI cards, filters, navigation and a reset control on every page.</p></div></li>
+            <li><div><div class="step-head"><b>Documented SQL build</b><span class="who me">Built by me</span></div><p>Ten typed tables, foreign keys, eight reporting views and 40 dashboard queries. Keys and currency totals were checked independently; a full MySQL server run is the next step.</p></div></li>
           </ol>
         </section>
 
@@ -745,8 +746,8 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
           </div></li>
           <li class="principle rv"><span class="p-n" aria-hidden="true">03</span><div>
             <h3>Use AI, check by hand</h3>
-            <p>I use Claude and Codex to draft DAX measures, Tableau calculations and layouts. Each figure is then checked against the source data before it goes on a dashboard.</p>
-            <p class="eg">Draft → check → compare → publish</p>
+            <p>I use Claude and Codex to draft SQL, DAX, Tableau calculations and layouts. Each figure is then checked against query output before it goes on a dashboard.</p>
+            <p class="eg">Draft → query → compare → publish</p>
           </div></li>
         </ol>
       </div>
@@ -794,11 +795,11 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
       <h3 class="block-title skills-head rv">Tools and where I've used them</h3>
       <dl class="skills rv">
         <div class="skill"><dt>Excel</dt><dd>Power Pivot data models, DAX measures, PivotTables, slicer-driven dashboards. Both projects.</dd></div>
-        <div class="skill"><dt>MySQL</dt><dd>Where the project data lived: Power BI and Tableau read the cleaned tables from MySQL, and every dashboard total was checked against it.</dd></div>
+        <div class="skill"><dt>SQL</dt><dd>MySQL star schemas, foreign keys, reporting views, validation queries (orphans, duplicates, completeness) and KPI queries.</dd></div>
         <div class="skill"><dt>Power BI</dt><dd>Multi-table models, DAX measures, tooltip pages, slicers, page navigation and a KPI reconciliation page.</dd></div>
         <div class="skill"><dt>Tableau</dt><dd>Relationships, parameters, LOD expressions, filter and parameter actions, multi-dashboard navigation.</dd></div>
-        <div class="skill"><dt>AI tools</dt><dd>Claude, Codex and GitHub Copilot for drafting measures, calculations and documentation.</dd></div>
-        <div class="skill"><dt>Presenting</dt><dd>Presented the Excel and Power BI dashboards (manufacturing) and the healthcare key takeaways to project reviewers.</dd></div>
+        <div class="skill"><dt>AI tools</dt><dd>Claude, Codex and GitHub Copilot for drafting queries, measures and documentation.</dd></div>
+        <div class="skill"><dt>Presenting</dt><dd>Presented the SQL checks (healthcare) and the Excel and Power BI dashboards (manufacturing) to project reviewers.</dd></div>
       </dl>
     </div>
   </section>
@@ -809,11 +810,11 @@ a.c-val:hover{text-decoration:underline;text-underline-offset:4px}
       <div class="faq-list rv">
         <details>
           <summary>Which parts did you build yourself?</summary>
-          <div class="ans"><p>In AXON Healthcare I built the Excel dashboard on a Power Pivot model, the nine-page Power BI report and the nine-dashboard Tableau workbook, and presented the key takeaways. In AXON Manufacturing I presented the team's Excel dashboard and part of the Power BI report, and built the Tableau edition on my own.</p></div>
+          <div class="ans"><p>In AXON Healthcare I wrote and presented the SQL validation and KPI queries and the key takeaways, and later rebuilt the Power BI, Tableau and SQL layers on my own. In AXON Manufacturing I presented the team's Excel dashboard and part of the Power BI report, and built the Tableau edition on my own.</p></div>
         </details>
         <details>
-          <summary>Where does MySQL fit in?</summary>
-          <div class="ans"><p>It is where the project data lived. Power BI and Tableau read the cleaned tables from MySQL, and every dashboard total was checked against it.</p></div>
+          <summary>How do you use SQL?</summary>
+          <div class="ans"><p>In AXON Healthcare I validated the ten tables with MySQL queries for row counts, completeness, orphan keys and duplicates, then wrote the KPI and reconciliation queries I presented. I also documented a SQL build with ten typed tables, eight reporting views and 40 dashboard queries.</p></div>
         </details>
         <details>
           <summary>How do you know the numbers are right?</summary>

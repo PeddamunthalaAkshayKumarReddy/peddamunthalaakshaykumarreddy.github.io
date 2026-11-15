@@ -486,7 +486,7 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
           </div>
         </div>
         <h1 id="name"><span class="pm">P M</span>Akshay Kumar Reddy</h1>
-        <p class="lede">I build dashboards in <strong>Excel, Power BI and Tableau</strong> on data I have cleaned and modelled in <strong>SQL</strong>. Before anything ships, every headline number is checked against the source.</p>
+        <p class="lede">I build dashboards in <strong>Excel, Power BI and Tableau</strong> on cleaned, modelled data stored in <strong>MySQL</strong>. Before anything ships, every headline number is checked against the source.</p>
         <ul class="facts">
           <li>BBA, ICFAI Foundation for Higher Education</li>
           <li>8 months at Accenture, Trust &amp; Safety</li>
@@ -723,7 +723,7 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
 
         <dl class="meta">
           <div><dt class="label">Context</dt><dd>Team capstone, 7 members<br>Training EMR dataset, 2026</dd></div>
-          <div><dt class="label">My role</dt><dd>Wrote and presented the SQL validation and KPI queries and the key takeaways. Later rebuilt the Power BI, Tableau and SQL layers on my own.</dd></div>
+          <div><dt class="label">My role</dt><dd>Built the Excel dashboard on a Power Pivot model, a nine-page Power BI report and a nine-dashboard Tableau workbook, and presented the key takeaways.</dd></div>
           <div><dt class="label">Data</dt><dd><span class="num">10,000</span> patients and visits · 1,000 doctors · 5 departments · 10 tables · 22 Mar 2023–21 Mar 2025</dd></div>
           <div><dt class="label">Tools</dt><dd class="chips"><span class="chip">Excel · Power Pivot</span><span class="chip">MySQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span></dd></div>
         </dl>
@@ -742,12 +742,12 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
           </section>
           <section class="ps-card ps-solution" aria-labelledby="hc-solution">
             <h4 class="ps-label" id="hc-solution"><span class="ps-dot" aria-hidden="true"></span>Solution</h4>
-            <p class="ps-lead">Validated the ten tables in SQL, built clinical and revenue-cycle dashboards in Excel, Power BI and Tableau, and logged every data issue so no dashboard shows a KPI the data can't support.</p>
+            <p class="ps-lead">Built clinical and revenue-cycle dashboards in Excel, Power BI and Tableau on ten tables stored in MySQL, and logged every data issue so no dashboard shows a KPI the data can't support.</p>
             <ul class="deliv" aria-label="Deliverables">
-              <li><b>SQL validation</b>Row counts, orphan keys, duplicates, completeness and KPI reconciliation queries</li>
+              <li><b>Excel dashboard</b>Power Pivot model with DAX measures, KPI cards, charts and slicers</li>
               <li><b>Power BI report</b>9 pages covering clinical operations, doctors, labs, billing, claims and policies</li>
               <li><b>Tableau workbook</b>9 dashboards, 36 KPI cards and 36 charts with filters and reset on every page</li>
-              <li><b>Documented SQL build</b>10 typed tables, 8 reporting views and 40 dashboard queries</li>
+              <li><b>Data-issue log</b>Every data problem recorded with the rows affected and the action taken</li>
             </ul>
             <p class="ps-foot"><span class="label">Outcome</span>One place to track visits, doctor workload, billing and claims, with plain notes wherever the data falls short.</p>
           </section>
@@ -781,11 +781,10 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
             <h4 class="block-title" id="hc-how">How it was built</h4>
             <ol class="steps">
               <li><b>Clean in Excel <span class="who">Team</span></b><p>Ten linked tables. Placeholder zero dates and zero lab values became blanks, and text IDs were fixed so they sort correctly.</p></li>
-              <li><b>Excel dashboard <span class="who">Team</span></b><p>Power Pivot model with DAX measures, PivotTables and slicers.</p></li>
-              <li><b>SQL validation <span class="who me">Built by me</span></b><p>MySQL queries for row counts, completeness, orphan keys, duplicates and query plans, then the KPI and reconciliation queries I presented.</p></li>
-              <li><b>Power BI rebuild <span class="who me">Built by me</span></b><p>Nine-page report with KPI cards, slicers and page navigation across clinical and revenue-cycle modules.</p></li>
-              <li><b>Tableau rebuild <span class="who me">Built by me</span></b><p>Nine dashboards with 36 charts and 36 KPI cards, filters, navigation and a reset control on every page.</p></li>
-              <li><b>Documented SQL build <span class="who me">Built by me</span></b><p>Ten typed tables, foreign keys, eight reporting views and 40 dashboard queries. Keys and currency totals were checked independently; a full MySQL server run is the next step.</p></li>
+              <li><b>Excel dashboard <span class="who me">Built by me</span></b><p>Power Pivot model with DAX measures, PivotTables and slicers.</p></li>
+              <li><b>Data in MySQL <span class="who">Team</span></b><p>The ten cleaned tables were stored in MySQL. Power BI and Tableau read from it, and its row counts and totals were used to check every dashboard.</p></li>
+              <li><b>Power BI report <span class="who me">Built by me</span></b><p>Nine-page report with KPI cards, slicers and page navigation across clinical and revenue-cycle modules.</p></li>
+              <li><b>Tableau workbook <span class="who me">Built by me</span></b><p>Nine dashboards with 36 charts and 36 KPI cards, filters, navigation and a reset control on every page.</p></li>
             </ol>
           </section>
 
@@ -876,8 +875,8 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
         </div>
         <div class="principle">
           <h3>Use AI, check by hand</h3>
-          <p>I use Claude and Codex to draft SQL, DAX, Tableau calculations and layouts. Each figure is then checked against query output before it goes on a dashboard.</p>
-          <p class="eg">Draft → query → compare → publish</p>
+          <p>I use Claude and Codex to draft DAX measures, Tableau calculations and layouts. Each figure is then checked against the source data before it goes on a dashboard.</p>
+          <p class="eg">Draft → check → compare → publish</p>
         </div>
       </div>
     </div>
@@ -904,11 +903,11 @@ a.c-val:hover { text-decoration: underline; text-underline-offset: 4px; }
           <h3 class="block-title">Tools and where I've used them</h3>
           <dl class="skills">
             <div class="skill"><dt>Excel</dt><dd>Power Pivot data models, DAX measures, PivotTables, slicer-driven dashboards. Both projects.</dd></div>
-            <div class="skill"><dt>SQL</dt><dd>MySQL star schemas, foreign keys, reporting views, validation queries (orphans, duplicates, completeness) and KPI queries.</dd></div>
+            <div class="skill"><dt>MySQL</dt><dd>Where the project data lived: Power BI and Tableau read the cleaned tables from MySQL, and every dashboard total was checked against it.</dd></div>
             <div class="skill"><dt>Power BI</dt><dd>Multi-table models, DAX measures, tooltip pages, slicers, page navigation and a KPI reconciliation page.</dd></div>
             <div class="skill"><dt>Tableau</dt><dd>Relationships, parameters, LOD expressions, filter and parameter actions, multi-dashboard navigation.</dd></div>
-            <div class="skill"><dt>AI tools</dt><dd>Claude, Codex and GitHub Copilot for drafting queries, measures and documentation.</dd></div>
-            <div class="skill"><dt>Presenting</dt><dd>Presented the SQL checks (healthcare) and the Excel and Power BI dashboards (manufacturing) to project reviewers.</dd></div>
+            <div class="skill"><dt>AI tools</dt><dd>Claude, Codex and GitHub Copilot for drafting measures, calculations and documentation.</dd></div>
+            <div class="skill"><dt>Presenting</dt><dd>Presented the Excel and Power BI dashboards (manufacturing) and the healthcare key takeaways to project reviewers.</dd></div>
           </dl>
         </div>
       </div>
